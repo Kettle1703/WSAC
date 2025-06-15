@@ -10,7 +10,17 @@ body {
   height: 100vh;
 }
 
-.center-box {
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.column {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -19,9 +29,8 @@ body {
   text-align: center;
 }
 
-.center-box label {
+label {
   display: block;
-  height: auto;
   min-height: 50px;
   padding: 10px;
   background-color: #c6f5c1;
@@ -30,7 +39,7 @@ body {
   word-wrap: break-word;
 }
 
-.center-box input {
+input[type="text"] {
   height: 50px;
   font-size: 20px;
   padding: 0 10px;
@@ -38,4 +47,28 @@ body {
   border-radius: 5px;
   box-sizing: border-box;
   width: 100%;
+}
+
+button {
+  height: 50px;
+  font-size: 20px;
+  background-color: #a0dca0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #8cc88c;
+}
+
+.file-name-input {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  padding: 0 10px;
+  border: 1px solid #a0dca0;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
