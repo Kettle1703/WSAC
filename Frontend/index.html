@@ -1,44 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+  
 <head>
   <meta charset="UTF-8">
-  <title>Ввод данных</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конференции - супер-сайтик</title>
+ <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
-  <div class="main-container">
+  <!-- Header -->
+  <header class="header">
+    <div class="top_nav">
 
-    <!-- Первая колонка -->
-    <div class="column">
-      <label id="output-label">Введите команду</label>
-      <input type="text" id="user-input" name="user_input">
-      <button id="submit-btn">Отправить</button>
+      <a href="https://pstu.ru/" class="logo">
+        <img class="header_logo" alt="ПНИПУ" src="static/image/PNIPU_russkiyi.png_01.png">
+      </a>
+
+      <a href="" class="btn">ВХОД</a>
+      
     </div>
-
-    <!-- Вторая колонка -->
-    <div class="column">
-      <label id="upload-label">Работа с файлами</label>
-      <form id="upload-form" enctype="multipart/form-data">
-        <input type="text" id="file-name-input" placeholder="Имя файла" class="file-name-input">
-        <button type="button" id="browse-btn">Обзор</button>
-        <input type="file" id="file-input" name="file" hidden>
-        <button type="submit">Загрузить</button>
-        <button type="button" id="download-btn">Выгрузить</button>
-      </form>
+    
+    <div class="low_nav">
+      <nav class="header_nav">
+        <ul class="header_list">
+          <li><a class="header_link header_link--active" href="index.html">Главная</a></li>
+          <li><a class="header_link" href="schedule.html">Расписание</a></li>
+          <li><a class="header_link" href="authors.html">Авторы</a></li>
+          <li><a class="header_link" href="contacts.html">Контакты</a></li>
+          <li><a class="header_link" href="archive.html">Архив конференций</a></li>
+        </ul>
+      </nav>
     </div>
+    
+  </header>
 
-    <!-- Третья колонка -->
-    <div class="column">
-      <label id="request-label">Введите ID</label>
-      <input type="text" id="id-input" name="id_input">
-      <button id="request-btn">Запросить</button>
-      <input type="text" id="field1" placeholder="Поле 1">
-      <input type="text" id="field2" placeholder="Поле 2">
-      <input type="text" id="field3" placeholder="Поле 3">
-    </div>
 
-  </div>
 
-  <script src="script.js"></script>
 </body>
+
 </html>
