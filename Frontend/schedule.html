@@ -7,6 +7,7 @@
   <title>Конференции - супер-сайтик</title>
   <link rel="stylesheet" href="static/css/global.css">
   <link rel="stylesheet" href="static/css/style_header.css">
+  <link rel="stylesheet" href="static/css/schedule_style.css">
 </head>
 
 <body>
@@ -33,7 +34,68 @@
     </div>
     
   </header>
+  <main>
+    <div class="schedule-container">
+      <div class="schedule-grid">
+        <div class="first-row">
+          <span class="section-label">Выбор секции</span>
+          <select id="thematic-sections" class="section-select">
+            <option value="" disabled selected>Тематические секции конференции:</option>
+            <option value="1">1. Новые материалы и технологии их создания</option>
+            <option value="2">2. Современные методы обработки материалов</option>
+            <option value="3">3. Передовые производственные технологии создания материалов и изделий</option>
+            <option value="4">4. Аддитивные и гибридные технологии в машиностроении</option>
+            <option value="5">5. Аэрокосмическая механика – самолеты будущего</option>
+            <option value="6">6. Электромеханические системы</option>
+            <option value="7">7. Математическое моделирование материалов, систем и процессов</option>
+            <option value="8">8. Цифровые технологии и машинное обучение в машиностроении</option>
+            <option value="9">9. Школьная секция</option>
+          </select>
+          <span class="timezone">Часовой пояс +2 от МСК</span>
+        </div>
 
+        <div class="row-spacer"></div>
+
+        <div class="second-row">
+          <span class="schedule-label">Расписание</span>
+        </div>
+
+        <div class="schedule-table">
+          <div class="table-header">
+            <div class="header-cell">Авторы</div>
+            <div class="header-cell">Название доклада</div>
+            <div class="header-cell">Дата и время</div>
+          </div>
+
+          <div class="table-row">
+            <div class="table-cell">Иванов И.И., Петров П.П.</div>
+            <div class="table-cell">Новые композитные материалы для авиации</div>
+            <div class="table-cell">15.05 – 10:00</div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">Сидоров А.А.</div>
+            <div class="table-cell">Цифровое проектирование в машиностроении</div>
+            <div class="table-cell">15.05 – 11:30</div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">Кузнецова М.С., Тихонов Д.Д.</div>
+            <div class="table-cell">Аддитивные технологии: вызовы и решения</div>
+            <div class="table-cell">15.05 – 13:00</div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">Васильев В.В.</div>
+            <div class="table-cell">Моделирование механических процессов в авиации</div>
+            <div class="table-cell">15.05 – 14:30</div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">Морозова Е.Е.</div>
+            <div class="table-cell">Искусственный интеллект в обработке материалов</div>
+            <div class="table-cell">15.05 – 16:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
 
 </body>
