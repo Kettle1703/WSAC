@@ -1,87 +1,58 @@
+.title-frame {
+  max-width: 1440px;
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  background: #968AE1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    <style>
-        body {
-            position: relative;
-            width: 1920px;
-            height: 1080px;
-            background: #FFFFFF;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #000000;
-        }
+.contacts-frame {
+  max-width: 1440px;
+  width: 80%;
+  height: 750px;
+  margin: 0 auto;
+  background: #D8D9F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-        .header {
-            position: absolute;
-            left: 50px;
-            top: 50px;
-            font-size: 36px;
-            font-weight: bold;
-            color: #000000;
-        }
+.contacts-container {
+  width: 80%;
+  max-width: 1000px;
+}
 
-        .title-frame {
-            position: absolute;
-            width: 1440px;
-            height: 50px;
-            left: 240px;
-            top: 140px;
-            background: #968AE1;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
+.section-title {
+  font-size: 23px;
+  font-weight: 600;
+}
 
-        .contacts-frame {
-            position: absolute;
-            width: 1440px;
-            height: 750px;
-            left: 240px;
-            top: 190px;
-            background: #D8D9F0;
-            border-radius: 0 0 10px 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+.committee {
+  margin-bottom: 40px;
+}
 
-        .contacts-container {
-            width: 80%;
-            max-width: 1000px;
-        }
+.committee-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 
-        .section-title {
-            font-size: 28px;
-            font-weight: bold;
-            color: #000000;
-        }
+.member {
+  margin-bottom: 15px;
 
-        .committee {
-            margin-bottom: 40px;
-        }
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
 
-        .committee-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #000000;
-        }
-
-        .member {
-            margin-bottom: 15px;
-            line-height: 1.5;
-            padding-left: 20px;
-            position: relative;
-            color: #000000;
-        }
-
-        .member:before {
-            content: "•";
-            color: #968AE1;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-    </style>
+.member:before {
+  content: "•";
+  color: #968AE1;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
