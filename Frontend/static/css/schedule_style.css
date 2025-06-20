@@ -6,6 +6,7 @@ body {
 }
 
 .schedule-container {
+    max-width: 1440px;
     width: 80%;
     margin: 0 auto;
 }
@@ -45,6 +46,8 @@ body {
     text-align: center;
     width: 100%;
     padding: 6px 20px;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .schedule-table {

@@ -5,7 +5,14 @@ body {
     background-color: white;
 }
 
-.news-section h2 {
+.news-section {
+    max-width: 1440px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+h1 {
     text-align: center;
     background-color: #968AE1;
     padding: 15px 0;
