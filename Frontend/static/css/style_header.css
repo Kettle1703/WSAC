@@ -1,17 +1,4 @@
-/* General */
-html {
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  background-color: #fff;
-
-}
+/* Header */
 
 a {
   text-decoration: none;
@@ -24,7 +11,7 @@ ul {
 }
 
 .header {
-  margin: 25px;
+  margin: 35px;
 }
 
 .top_nav {
