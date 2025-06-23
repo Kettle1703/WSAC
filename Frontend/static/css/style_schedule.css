@@ -1,85 +1,65 @@
-.schedule-container {
-    max-width: 1440px;
-    width: 80%;
-    margin: 0 auto;
+.container {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.schedule-grid {
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto;
+h1 {
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  background-color: #968AE1;
+  font-size: 24px;
 }
 
-.first-row,
-.second-row {
-    display: flex;
-    align-items: center;
-    padding: 6px 20px;
-    background-color: #968AE1;
+.section-selector {
+  background-color: #968AE1;
+  padding: 10px 15px;
+  margin-top: 20px; /* Добавлен отступ сверху 20px */
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.row-spacer {
-    height: 25px;
+.section-selector label {
+  font-size: 16px;
+  color: #000;
 }
 
 .section-select {
-    padding: 8px 12px;
-    border-radius: 4px;
-    border: 1px solid #000;
-    background-color: #968AE1;
-    width: auto;
-    margin: 0 15px;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  background-color: #968AE1;
+  color: #000;
+  font-size: 16px;
+  width: auto;
+  max-width: 100%;
+  
 }
 
-.timezone {
-    margin-left: auto;
+.table-wrapper {
+  background-color: #D8D9F0;
+  padding: 3px;
+  overflow-x: auto;
 }
 
-.schedule-label {
-    text-align: center;
-    width: 100%;
-    padding: 6px 20px;
-    font-size: 24px;
-    font-weight: 600;
+.schedule_table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
 }
 
-.schedule-table {
-    background-color: #C3DCF0;
-    padding: 3px;
+.schedule_table th,
+.schedule_table td {
+  border: 1px solid #000;
+  padding: 8px 12px;
+  text-align: left;
+  background-color: transparent;
 }
 
-.table-header {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    border: 1px solid #000;
-}
-
-.header-cell {
-    padding: 8px 12px;
-    text-align: center;
-    border-right: 1px solid #000;
-}
-
-.header-cell:last-child {
-    border-right: none;
-}
-
-.table-row {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
-    background-color: #C3DCF0;
-}
-
-.table-cell {
-    padding: 8px 12px;
-    border-right: 1px solid #000;
-    text-align: left;
-}
-
-.table-cell:last-child {
-    border-right: none;
-    text-align: center;
+.schedule_table th {
+  background-color: #D8D9F0;
+  text-align: center;
 }
