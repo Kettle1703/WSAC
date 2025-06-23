@@ -111,3 +111,33 @@
 .login_button.register:hover {
   background-color: #0066A0; /* Темнее при наведении */
 }
+
+/* Дополнительные стили для страниц смены пароля */
+input[type="date"] {
+  /* Стилизация поля ввода даты */
+  font-family: sans-serif;
+  min-height: 50px;
+}
+
+.password_requirements {
+  font-size: 14px;
+  color: #666;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 480px) {
+  .login_form {
+    max-width: 90%;
+  }
+  
+  .login_title {
+    font-size: 24px;
+    padding: 25px 20px 15px;
+  }
+  
+  .form_content {
+    padding: 0 20px 20px;
+  }
+}
