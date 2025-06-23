@@ -1,0 +1,79 @@
+/* Основной контейнер */
+.container {
+  width: min(1440px, 80%);
+  margin-inline: auto;
+}
+
+/* Заголовок страницы */
+.page_title {
+  margin: 0;
+  font: 600 24px/50px sans-serif;
+  text-align: center;
+  background-color: #968AE1;
+  color: rgb(0, 0, 0);
+  padding: 10px 0;
+}
+
+/* Даты проведения */
+.conference_dates,
+.registration_period {
+  text-align: center;
+  font: 600 20px/1.4 sans-serif;
+  margin: 30px 0;
+  color: #2A5DB0;
+}
+
+/* Блоки с информацией */
+.info_block {
+  background: #D8D9F0;
+  padding: 25px;
+  margin: 25px 0;
+}
+
+/* Заголовки разделов */
+.section_title {
+  font: 600 20px/1.4 sans-serif;
+  color: #333;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+/* Основной текст */
+.section_text {
+  font: 400 16px/1.6 sans-serif;
+  color: #444;
+}
+
+/* Список секций (одна колонка) */
+.section_list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.section_list li {
+  margin-bottom: 10px;
+}
+
+/* Ссылки */
+.section_text a {
+  color: #2A5DB0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section_text a:hover {
+  text-decoration: underline;
+}
+
+/* Важные заметки */
+.important_note {
+  font-weight: 600;
+  color: #B00020;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .info_block {
+    padding: 15px;
+  }
+}
