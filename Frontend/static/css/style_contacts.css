@@ -1,87 +1,72 @@
+/* Основной контейнер */
+.container {
+  width: min(1440px, 80%);
+  margin-inline: auto;
+}
 
-    <style>
-        body {
-            position: relative;
-            width: 1920px;
-            height: 1080px;
-            background: #FFFFFF;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #000000;
-        }
+/* Заголовок страницы */
+.page_title {
+  margin: 0;
+  font: 600 24px/50px sans-serif;
+  text-align: center;
+  background-color: #968AE1;
+  color: rgb(0, 0, 0);
+  padding: 10px 0;
+}
 
-        .header {
-            position: absolute;
-            left: 50px;
-            top: 50px;
-            font-size: 36px;
-            font-weight: bold;
-            color: #000000;
-        }
+/* Блок с контактами */
+.committee_block {
+  background: #D8D9F0;
+  padding: 20px;
+  margin: 20px 0;
+}
 
-        .title-frame {
-            position: absolute;
-            width: 1440px;
-            height: 50px;
-            left: 240px;
-            top: 140px;
-            background: #968AE1;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
+/* Специальный стиль для контактной информации */
+.committee_block.contact_info {
+  text-align: center;
+  font-size: 18px;
+}
 
-        .contacts-frame {
-            position: absolute;
-            width: 1440px;
-            height: 750px;
-            left: 240px;
-            top: 190px;
-            background: #D8D9F0;
-            border-radius: 0 0 10px 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+/* Заголовки комитетов */
+.committee_title {
+  font: 600 20px/1.4 sans-serif;
+  color: #333;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
 
-        .contacts-container {
-            width: 80%;
-            max-width: 1000px;
-        }
+/* Основной текст */
+.committee_text {
+  font: 400 16px/1.6 sans-serif;
+  color: #444;
+}
 
-        .section-title {
-            font-size: 28px;
-            font-weight: bold;
-            color: #000000;
-        }
+.committee_text p {
+  margin: 0 0 15px 0;
+}
 
-        .committee {
-            margin-bottom: 40px;
-        }
+.committee_text a {
+  color: #2A5DB0;
+  text-decoration: none;
+}
 
-        .committee-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #000000;
-        }
+.committee_text a:hover {
+  text-decoration: underline;
+}
 
-        .member {
-            margin-bottom: 15px;
-            line-height: 1.5;
-            padding-left: 20px;
-            position: relative;
-            color: #000000;
-        }
+/* Стили для списка участников */
+.member_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-        .member:before {
-            content: "•";
-            color: #968AE1;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-    </style>
+.member_item {
+  margin-bottom: 15px;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
+
+.member_item:last-child {
+  margin-bottom: 0;
+}

@@ -1,103 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in page - Пермский Политех</title>
-    <style>
-        body {
-            position: relative;
-            width: 1920px;
-            height: 1080px;
-            background: #FFFFFF;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .header {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 50px;
-            color: #000000;
-        }
-
-        .resources {
-            font-size: 24px;
-            margin-bottom: 30px;
-            color: #000000;
-        }
-
-        .login-form {
-            display: flex;
-            flex-direction: column;
-            width: 400px;
-        }
-
-        .input-field {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #CCCCCC;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .login-button {
-            background-color: #1E90FF;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-
-        .login-button:hover {
-            background-color: #187bcd;
-        }
-
-        .links {
-            display: flex;
-            justify-content: space-between;
-            width: 400px;
-        }
-
-        .link {
-            color: #1E90FF;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .link:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход - Пермский политех</title>
+  <link rel="stylesheet" href="static/css/style_login.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">пермский политех</div>
-        <div class="resources">Ресурсы Пермского Политеха</div>
-        
-        <form class="login-form">
-            <input type="email" class="input-field" placeholder="Введите адрес электронной почты" required>
-            <input type="password" class="input-field" placeholder="Введите пароль" required>
-            <button type="submit" class="login-button">ВХОД</button>
-        </form>
-        
-        <div class="links">
-            <a href="#" class="link">Забыли пароль?</a>
-            <a href="#" class="link">Регистрация</a>
-        </div>
+  <div class="login_container">
+    <!-- Добавлен логотип -->
+    <div class="login_logo">
+      <a href="https://pstu.ru/" class="logo">
+        <img class="header_logo" alt="ПНИПУ" src="static/image/PNIPU_russkiyi.png_01.png">
+      </a>
     </div>
+    
+    <form class="login_form">
+      <h1 class="login_title">Ресурсы Пермского Политеха</h1>
+      
+      <div class="form_content">
+        <div class="form_group">
+          <label for="email">Введите адрес электронной почты</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form_group">
+          <label for="password">Введите пароль</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        
+        <button type="submit" class="login_button">ВХОД</button>
+      </div>
+      
+      <div class="login_links">
+        <a href="#">Забыли пароль?</a>
+        <span>|</span>
+        <a href="#">Регистрация</a>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
