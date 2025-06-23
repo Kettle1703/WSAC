@@ -1,0 +1,178 @@
+.main {
+  max-width: 1440px;  
+  margin: 0 auto;
+}
+
+.applitation_submit_header {
+  margin: 20px auto; /* Убрали отступ снизу */
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.inputs {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.select {
+  width: 600px;
+  padding: 9px 7px 9px 3px;
+  border: none;
+  background-color: #D8D9F0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.field__input {
+  border: none;
+  background-color: #D8D9F0;
+  width: 600px;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 9px 7px;
+}
+
+.custom_checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D8D9F0;
+  padding: 1px 10px 1px 7px;
+  width: 600px;
+  height: 36px;
+  font-size: 16px;
+  cursor: default; /* теперь клика нет на всём блоке */
+}
+
+.checkbox_label {
+  font-size: 16px;
+}
+
+/* Обёртка для чекбокса — теперь кликается только она */
+.checkmark_wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Скрываем нативный чекбокс */
+.checkmark_wrapper input[type="checkbox"] {
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Кастомный квадрат */
+.checkmark {
+  height: 24px;
+  width: 24px;
+  border: 2px solid #000;
+  background-color: #fff;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Галочка при чекнутом */
+.checkmark_wrapper input[type="checkbox"]:checked + .checkmark {
+  background-color: black;
+  position: relative;
+}
+
+.checkmark_wrapper input[type="checkbox"]:checked + .checkmark::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom_file_wrapper {
+  width: 600px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.custom_file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D8D9F0;
+  padding: 1px 10px 1px 7px;;
+  position: relative;
+  width: 100%;
+  height: 36px;
+  cursor: default; /* чтобы всё поле не выглядело кликабельным */
+}
+
+/* Надпись "Файл тезисов/статьи" */
+.file_label {
+  pointer-events: none; /* делает текст некликабельным */
+}
+
+/* Кастомная кнопка */
+.file_button {
+  border: 2px solid #000;
+  padding: 4px 10px;
+  background-color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Настоящий input: поверх только кнопки */
+.custom_file input[type="file"] {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: calc(100% - 20px);
+  width: calc(100% - 400px); /* только справа, где кнопка */
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Название выбранного файла */
+.file_name_display {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+  max-width: 600px;
+  word-break: break-all;
+}
+
+.submit_application {
+  width: 600px;
+  height: 36px;
+  background-color: #1B1F26;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.submit_application:hover {
+  opacity: 0.9;
+}
+
+.custom_checkbox-agreement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px 0px 0px;
+  width: 600px;
+  font-size: 24px;
+  cursor: default; /* теперь клика нет на всём блоке */
+}
+
+.checkbox_label-agreement {
+
+}
