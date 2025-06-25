@@ -30,7 +30,7 @@ ul {
 
 .header_list {
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 
 .header_link {
@@ -66,4 +66,48 @@ ul {
 
 .btn:hover {
   opacity: 0.8;
+}
+
+/* Media requests */
+
+@media screen and (max-width: 1500px) {
+  .header_logo {
+    width: 200px;
+  }
+
+  .header_link {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header_logo {
+    width: 100px;
+  }
+
+  .header_link {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header_logo {
+    width: 100px;
+  }
+
+  .header_link {
+    font-size: 10px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
 }

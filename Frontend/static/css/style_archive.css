@@ -1,6 +1,6 @@
 /* Archive */
 
-.container {
+.main {
   max-width: 1440px;
   width: 80%;
   margin: 0 auto;
@@ -23,18 +23,41 @@ h1 {
 
 .archive_table {
   border-collapse: collapse; /* объединяет границы */
-  background: #D8D9F0;
+  table-layout: fixed;
+  width: 100%;
 }
 
 .archive_table th {
   border: 1px solid #000; /* чёткие границы */
   text-align: center;
-  padding: 8px;
-
+  padding: 5px;
 }
 .archive_table td {
   border: 1px solid #000; /* чёткие границы */
-  text-align: left;
-  padding: 8px;
+  padding: 5px;
+}
 
+.archive_table th:nth-child(1),
+.archive_table td:nth-child(1) {
+  width: 50px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.archive_table th:nth-child(2),
+.archive_table td:nth-child(2) {
+  word-wrap: break-word;
+}
+
+.uploaded_files p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.uploaded_file_link {
+  text-decoration: underline;
+}
+
+.uploaded_file_link:hover {
+  opacity: 0.7;
 }
