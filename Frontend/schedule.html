@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -28,14 +28,24 @@
         </ul>
       </nav>
 
+      <div class="language-switcher">
+        <span class="language-label">Language</span>
+        <div class="language-dropdown">
+          <div class="language-current">Русский</div>
+          <ul class="language-options">
+            <li>English</li>
+          </ul>
+        </div>
+      </div>
+
       <a href="login.html" class="btn">ВХОД</a>
     </div>
   </header>
 
-  <main>
+  <main class="main">
     <div class="container">
-      <h1 class="container_text">Расписание</h1>
 
+      <h1>Расписание</h1>
       <div class="section-selector">
         <label for="thematic-sections">Выбор секции</label>
         <select id="thematic-sections" class="section-select">
@@ -83,6 +93,7 @@
           </tbody>
         </table>
       </div>
+
     </div>
   </main>
 </body>

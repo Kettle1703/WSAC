@@ -1,9 +1,14 @@
 /* Основной контейнер */
-.container {
-  width: min(1440px, 80%);
-  margin-inline: auto;
+.main {
+  margin-bottom: 40px;
 }
 
+.container {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+}
+ 
 /* Заголовок страницы */
 .page_title {
   margin: 0;

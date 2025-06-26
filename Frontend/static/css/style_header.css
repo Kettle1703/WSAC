@@ -52,6 +52,46 @@ ul {
   opacity: 0.8;
 }
 
+.language-switcher {
+  display: grid;
+  align-items: center;
+}
+
+.language-label {
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.language-dropdown {
+  margin: auto;
+}
+
+.language-current {
+  padding: 5px;
+  border: 1px solid #D9D9D9;
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.language-options li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.language-options li:hover {
+  background: #f5f5f5;
+}
+
+.language-dropdown:hover .language-options {
+  display: block;
+}
+
 .btn {
   font-size: 24px;
   font-weight: 700;

@@ -9,37 +9,37 @@
 </head>
 
 <body>
-  <div class="login_container">
-    <!-- Добавлен логотип -->
-    <div class="login_logo">
+  <main class="main">
+    <div class="container">
+      <!-- Добавлен логотип -->
       <a href="https://pstu.ru/" class="logo">
         <img class="header_logo" alt="ПНИПУ" src="static/image/PNIPU_russkiyi.png_01.png">
       </a>
+      
+      <form class="login_form">
+        <h1 class="login_title">Ресурсы Пермского Политеха</h1>
+        
+        <div class="form_content">
+          <div class="form_group">
+            <label for="email">Введите адрес электронной почты</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form_group">
+            <label for="password">Введите пароль</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          
+          <button type="submit" class="login_button">ВХОД</button>
+        </div>
+        
+        <div class="login_links">
+          <a href="#">Забыли пароль?</a>
+          <span>|</span>
+          <a href="#">Регистрация</a>
+        </div>
+      </form>
     </div>
-    
-    <form class="login_form">
-      <h1 class="login_title">Ресурсы Пермского Политеха</h1>
-      
-      <div class="form_content">
-        <div class="form_group">
-          <label for="email">Введите адрес электронной почты</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form_group">
-          <label for="password">Введите пароль</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        
-        <button type="submit" class="login_button">ВХОД</button>
-      </div>
-      
-      <div class="login_links">
-        <a href="#">Забыли пароль?</a>
-        <span>|</span>
-        <a href="#">Регистрация</a>
-      </div>
-    </form>
-  </div>
+  </main>
 </body>
 </html>

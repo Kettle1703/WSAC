@@ -1,3 +1,7 @@
+.main {
+  margin-bottom: 40px;
+}
+
 /* Основной контейнер */
 .container {
   max-width: 1440px;

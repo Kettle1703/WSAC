@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,13 +27,24 @@
         </ul>
       </nav>
 
-      <div class="language_switcher">
-        <span>Русский</span>
+      <div class="language-switcher">
+        <span class="language-label">Language</span>
+        <div class="language-dropdown">
+          <div class="language-current">Русский</div>
+          <ul class="language-options">
+            <li>English</li>
+          </ul>
+        </div>
       </div>
+
+      <a href="login.html" class="btn">ВХОД</a>
+      
     </div>
   </header>
+
+
  <!-- Основное содержимое -->
-  <main class="contacts_page">
+  <main class="main">
     <div class="container">
       <h1 class="page_title">Контакты</h1>
       
@@ -73,7 +84,7 @@
      <!-- Контактная информация -->
       <div class="committee_block contact_info">
         <div class="committee_text">
-          <p>Для связи по любым вопросам: <a href="mailto:aesmtd@mail.ru">aesmtd@mail.ru</a></p>
+          <span>Для связи по любым вопросам: <a href="mailto:aesmtd@mail.ru">aesmtd@mail.ru</a></span>
         </div>
       </div>
     </div>
