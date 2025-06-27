@@ -2,22 +2,6 @@
   margin-bottom: 40px;
 }
 
-/* Основной контейнер */
-.container {
-  width: min(1440px, 80%);
-  margin-inline: auto;
-} 
-
-/* Заголовок страницы */
-h1 {
-  margin: 0;
-  font-weight: 600;
-  text-align: center;
-  line-height: 50px;
-  background-color: #968AE1;
-  font-size: 24px;
-}
-
 /* Даты проведения */
 .conference_dates,
 .registration_period {

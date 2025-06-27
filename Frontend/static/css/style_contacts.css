@@ -3,27 +3,12 @@
   margin-bottom: 40px;
 }
 
-.container {
-  max-width: 1440px;
-  width: 80%;
-  margin: 0 auto;
-}
- 
-/* Заголовок страницы */
-.page_title {
-  margin: 0;
-  font: 600 24px/50px sans-serif;
-  text-align: center;
-  background-color: #968AE1;
-  color: rgb(0, 0, 0);
-  padding: 10px 0;
-}
-
 /* Блок с контактами */
 .committee_block {
   background: #D8D9F0;
-  padding: 20px;
-  margin: 20px 0;
+  padding: 3px; 
+  margin: 12px 0;
+  color: #000;
 }
 
 /* Специальный стиль для контактной информации */
@@ -35,43 +20,54 @@
 /* Заголовки комитетов */
 .committee_title {
   font: 600 20px/1.4 sans-serif;
-  color: #333;
-  margin: 0 0 20px 0;
+  color: #000;
+  margin: 30px 0 10px; 
   text-align: center;
 }
 
-/* Основной текст */
-.committee_text {
-  font: 400 16px/1.6 sans-serif;
-  color: #444;
+/* Таблицы */
+.committee_block table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  margin-top: 6px;
 }
 
-.committee_text p {
-  margin: 0 0 15px 0;
+/* Ячейки таблицы */
+.committee_block td {
+  padding: 16px 16px;
+  vertical-align: top;
+  text-align: left;
+  border: none;
+  line-height: 1.6;
+  color: #000;
 }
 
-.committee_text a {
+/* Заголовки таблицы */
+.committee_block th {
+  padding: 4px; 
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+}
+
+
+/* Первый столбец без переноса */
+.committee_block td:first-child,
+.committee_block th:first-child {
+  white-space: nowrap;
+  width: 200px;
+  padding-right: 12px;
+  font-weight: 600;
+}
+
+/* Ссылки */
+.committee_block a {
   color: #2A5DB0;
   text-decoration: none;
 }
 
-.committee_text a:hover {
+.committee_block a:hover {
   text-decoration: underline;
-}
-
-/* Стили для списка участников */
-.member_list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.member_item {
-  margin-bottom: 15px;
-  text-indent: -1.5em;
-  padding-left: 1.5em;
-}
-
-.member_item:last-child {
-  margin-bottom: 0;
 }
