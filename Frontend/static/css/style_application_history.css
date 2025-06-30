@@ -1,0 +1,20 @@
+.application_info {
+  width: auto;
+  background-color: #968AE1;
+  font-size: 16px;
+  padding: 9px 7px;
+  display: grid;
+  gap: 30px;
+}
+
+.application {
+  display: grid;
+  gap: 10px;
+}
+
+.info {
+  background-color: #D8D9F0;
+  margin: 0;
+  padding: 9px 7px;
+  width: 600px;
+}

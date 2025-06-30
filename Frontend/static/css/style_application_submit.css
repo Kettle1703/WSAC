@@ -12,17 +12,24 @@
 
 .inputs {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 25px;
 }
 
 .select {
   width: 600px;
   height: 36px;
-  padding: 9px 7px 9px 3px;
+  padding: 9px 7px;
   border: none;
   background-color: #D8D9F0;
   font-size: 16px;
   font-weight: 300;
+}
+
+.text-field__input {
+  position: relative;
+  background-color: #D8D9F0;
+  width: 600px;
+  height: 36px;
 }
 
 .field__input {
@@ -32,6 +39,28 @@
   font-weight: 300;
   font-size: 16px;
   padding: 9px 7px;
+  outline: none;
+}
+
+.text-field__placeholder {
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #7d7d7d;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.field__input:focus + .text-field__placeholder,
+.field__input:not(:placeholder-shown) + .text-field__placeholder {
+  top: -20px;
+  left: 5px;
+  font-size: 13px;
+  color: #3a3a99;
+  padding: 0 4px;
+  transform-origin: left;
 }
 
 .custom_checkbox {
@@ -175,23 +204,3 @@
   cursor: default; /* теперь клика нет на всём блоке */
 }
 
-.application_info {
-  width: auto;
-  background-color: #968AE1;
-  font-size: 16px;
-  padding: 9px 7px;
-  display: grid;
-  gap: 30px;
-}
-
-.application {
-  display: grid;
-  gap: 10px;
-}
-
-.info {
-  background-color: #D8D9F0;
-  margin: 0;
-  padding: 9px 7px;
-  width: 600px;
-}
