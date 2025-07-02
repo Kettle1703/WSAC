@@ -33,6 +33,9 @@
 }
 
 .field__input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border: none;
   background-color: #D8D9F0;
   width: 600px;
@@ -180,14 +183,13 @@
 
 
 
-.submit_application {
+.button {
   width: 600px;
   height: 36px;
   background-color: #1B1F26;
   color: #fff;
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 40px;
 }
 
 .submit_application:hover {

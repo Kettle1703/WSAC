@@ -2,6 +2,125 @@
   margin-bottom: 40px;
 }
 
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 400px; /* Фиксированная высота слайдера */
+}
+
+/* Скрываем радио-кнопки */
+.slider > input[type="radio"] {
+  display: none;
+}
+
+.slides-wrapper {
+  display: flex;
+  width: 500%;
+  transition: transform 0.5s ease;
+}
+
+.slider-slide {
+  width: 20%;
+  flex-shrink: 0;
+  display: flex;         /* Добавляем flex */
+  justify-content: center; /* Центрируем по горизонтали */
+}
+
+.slider-slide img {
+  width: 80%;           /* Ваш размер 80% */
+  display: block;
+  max-height: 100%;     /* Ограничиваем высоту */
+  object-fit: contain;  /* Сохраняем пропорции */
+}
+
+
+/* Навигационные точки */
+.slide-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+
+.slide-bar {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.slide-bar:hover {
+  background: #888;
+}
+
+/* Активная точка */
+#r1:checked ~ .slide-nav label[for="r1"],
+#r2:checked ~ .slide-nav label[for="r2"],
+#r3:checked ~ .slide-nav label[for="r3"],
+#r4:checked ~ .slide-nav label[for="r4"],
+#r5:checked ~ .slide-nav label[for="r5"] {
+  background: #333;
+}
+
+/* Переключение слайдов */
+#r1:checked ~ .slides-wrapper { transform: translateX(0); }
+#r2:checked ~ .slides-wrapper { transform: translateX(-20%); }
+#r3:checked ~ .slides-wrapper { transform: translateX(-40%); }
+#r4:checked ~ .slides-wrapper { transform: translateX(-60%); }
+#r5:checked ~ .slides-wrapper { transform: translateX(-80%); }
+
+/* Стили для стрелок */
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: calc(100% - 40px); /* Учитываем отступы */
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.prev, .next {
+  cursor: pointer;
+  padding: 16px;
+  font-size: 18px;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  user-select: none;
+  transform: translateY(-50%); /* Точное вертикальное центрирование */
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* Скрываем стрелки, которые не нужны */
+#r1:checked ~ .navigation label[for="r5"].prev,
+#r2:checked ~ .navigation label[for="r1"].prev,
+#r3:checked ~ .navigation label[for="r2"].prev,
+#r4:checked ~ .navigation label[for="r3"].prev,
+#r5:checked ~ .navigation label[for="r4"].prev {
+  display: block;
+}
+
+#r1:checked ~ .navigation label[for="r2"].next,
+#r2:checked ~ .navigation label[for="r3"].next,
+#r3:checked ~ .navigation label[for="r4"].next,
+#r4:checked ~ .navigation label[for="r5"].next,
+#r5:checked ~ .navigation label[for="r1"].next {
+  display: block;
+}
+
+.navigation label {
+  display: none;
+}
+
 .news-section {
   background-color: #D8D9F0;
   padding: 20px;

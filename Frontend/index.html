@@ -13,9 +13,9 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="top_nav">
+    <div class="top_nav"> 
 
-      <a href="https://pstu.ru/" class="logo">
+      <a href="index.html" class="logo">
         <img class="header_logo" alt="ПНИПУ" src="static/image/pish_logo.png">
       </a>
 
@@ -50,8 +50,48 @@
   <main class="main">
     <div class="container">
 
-      <h1>Новости</h1>
+      <div class="slider">
+        <!-- Радио-кнопки должны быть на верхнем уровне (не в div) -->
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
+        
+        <div class="slides-wrapper">
+          <div class="slider-slide"><img src="static/image/carousel_1.jpg" alt="Изображение 1"></div>
+          <div class="slider-slide"><img src="static/image/carousel_2.jpg" alt="Изображение 2"></div>
+          <div class="slider-slide"><img src="static/image/carousel_3.jpg" alt="Изображение 3"></div>
+          <div class="slider-slide"><img src="static/image/carousel_4.jpg" alt="Изображение 4"></div>
+          <div class="slider-slide"><img src="static/image/carousel_5.jpg" alt="Изображение 5"></div>
+        </div>
+        
+        <!-- Навигационные точки -->
+        <div class="slide-nav">
+          <label for="r1" class="slide-bar"></label>
+          <label for="r2" class="slide-bar"></label>
+          <label for="r3" class="slide-bar"></label>
+          <label for="r4" class="slide-bar"></label>
+          <label for="r5" class="slide-bar"></label>
+        </div>
+        
+        <!-- Стрелки для навигации -->
+        <div class="navigation">
+          <label for="r1" class="prev">❮</label>
+          <label for="r2" class="prev">❮</label>
+          <label for="r3" class="prev">❮</label>
+          <label for="r4" class="prev">❮</label>
+          <label for="r5" class="prev">❮</label>
+          
+          <label for="r1" class="next">❯</label>
+          <label for="r2" class="next">❯</label>
+          <label for="r3" class="next">❯</label>
+          <label for="r4" class="next">❯</label>
+          <label for="r5" class="next">❯</label>
+        </div>
+      </div>
 
+      <h1>Новости</h1>
       <div class="news-section">
         <article class="news-item">
           <time datetime="2025-06-18" class="news-date">18 июня 2025</time>
@@ -68,7 +108,6 @@
           <p class="news-content">Вышло обновление безопасности для пользовательских аккаунтов.</p>
         </article>
       </div>
-
     </div>
   </main>
 
