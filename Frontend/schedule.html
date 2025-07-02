@@ -14,38 +14,41 @@
   <!-- Header -->
   <header class="header">
     <div class="top_nav">
-      <a href="https://pstu.ru/" class="logo">
-        <img class="header_logo" alt="ПНИПУ" src="static/image/pish_logo.png" />
+
+      <a href="index.html" class="logo">
+        <img class="header_logo" alt="ПИШ" src="static/image/pish_logo.png">
       </a>
 
       <nav class="header_nav">
         <ul class="header_list">
-          <li><a class="header_link" href="index.html">Главная</a></li>
-          <li><a class="header_link header_link--active" href="schedule.html">Доклады</a></li>
-          <li><a class="header_link" href="authors.html">Авторам</a></li>
-          <li><a class="header_link" href="contacts.html">Контакты</a></li>
-          <li><a class="header_link" href="archive.html">Архив</a></li>
+          <li><a class="header_link" href="index.html" data-i18n-key="nav_home">Главная</a></li>
+          <li><a class="header_link header_link--active" href="schedule.html" data-i18n-key="nav_reports">Доклады</a></li>
+          <li><a class="header_link" href="authors.html" data-i18n-key="nav_authors">Авторам</a></li>
+          <li><a class="header_link" href="contacts.html" data-i18n-key="nav_contacts">Контакты</a></li>
+          <li><a class="header_link" href="archive.html" data-i18n-key="nav_archive">Архив</a></li>
         </ul>
       </nav>
 
       <div class="language-switcher">
-        <span class="language-label">Language</span>
+        <span class="language-label" data-i18n-key="lang_label">Language</span>
         <div class="language-dropdown">
-          <div class="language-current">Русский</div>
+          <div class="language-current" id="language-current">Русский</div>
           <ul class="language-options">
-            <li>English</li>
+            <li data-lang="en">English</li>
+            <li data-lang="ru" style="display:none;">Русский</li>
           </ul>
         </div>
       </div>
 
-      <a href="login.html" class="btn">ВХОД</a>
+      <a href="login.html" class="btn" data-i18n-key="btn_login">ВХОД</a>
+
     </div>
   </header>
 
   <main class="main">
     <div class="container">
 
-      <h1>Расписание</h1>
+      <h1>Доклады</h1>
       <div class="section-selector">
         <label for="thematic-sections">Выбор секции</label>
         <select id="thematic-sections" class="section-select">
@@ -96,6 +99,7 @@
 
     </div>
   </main>
+  <script src="static/js/script_schedule.js" defer></script>
+  <script src="static/js/script_translate.js" defer></script>
 </body>
-
 </html>

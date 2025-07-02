@@ -15,112 +15,152 @@
   <header class="header">
     <div class="top_nav">
 
-      <a href="https://pstu.ru/" class="logo">
-        <img class="header_logo" alt="ПНИПУ" src="static/image/pish_logo.png">
+      <a href="index.html" class="logo">
+        <img class="header_logo" alt="ПИШ" src="static/image/pish_logo.png">
       </a>
 
       <nav class="header_nav">
         <ul class="header_list">
-          <li><a class="header_link" href="index.html">Главная</a></li>
-          <li><a class="header_link" href="schedule.html">Доклады</a></li>
-          <li><a class="header_link" href="authors.html">Авторам</a></li>
-          <li><a class="header_link" href="contacts.html">Контакты</a></li>
-          <li><a class="header_link" href="archive.html">Архив</a></li>
+          <li><a class="header_link" href="index.html" data-i18n-key="nav_home">Главная</a></li>
+          <li><a class="header_link" href="schedule.html" data-i18n-key="nav_reports">Доклады</a></li>
+          <li><a class="header_link" href="authors.html" data-i18n-key="nav_authors">Авторам</a></li>
+          <li><a class="header_link" href="contacts.html" data-i18n-key="nav_contacts">Контакты</a></li>
+          <li><a class="header_link" href="archive.html" data-i18n-key="nav_archive">Архив</a></li>
         </ul>
       </nav>
 
       <div class="language-switcher">
-        <span class="language-label">Language</span>
+        <span class="language-label" data-i18n-key="lang_label">Language</span>
         <div class="language-dropdown">
-          <div class="language-current">Русский</div>
+          <div class="language-current" id="language-current">Русский</div>
           <ul class="language-options">
-            <li>English</li>
+            <li data-lang="en">English</li>
+            <li data-lang="ru" style="display:none;">Русский</li>
           </ul>
         </div>
       </div>
 
-      <a href="login.html" class="btn">ВХОД</a>
-      
+      <a href="login.html" class="btn" data-i18n-key="btn_login">ВХОД</a>
+
     </div>
   </header>
+
 
   <!-- Main -->
   <main class="main">
     <div class="container">
-      <h1 class="container_text">Информация о пользователе</h1>
+      <h2 class="container_text" data-i18n-key="user_info">Информация о пользователе</h2>
 
       <form class="form-grid">
         <!-- Горизонтальная сетка -->
         <div class="form-row">
           <!-- Первый столбик -->
           <div class="column">
-            <span class="column-title">Личные данные</span>
-            <input type="text" name="lastname" placeholder="Фамилия" />
-            <input type="text" name="firstname" placeholder="Имя" />
-            <input type="text" name="patronymic" placeholder="Отчество" />
-            <input type="text" name="birthyear" placeholder="Год рождения" />
-            <input type="text" name="country" placeholder="Страна" />
-            <input type="text" name="city" placeholder="Город" />
+            <span class="column-title" data-i18n-key="personal_data">Личные данные</span>
+            <div class="text-field__input">
+              <input class="field__input" type="text" name="lastname" placeholder="" required>
+              <label class="text-field__placeholder" data-i18n-key="lastname">Фамилия</label>
+            </div>
+            <div class="text-field__input">
+              <input class="field__input" type="text" name="firstname" placeholder="" required>
+              <label class="text-field__placeholder" data-i18n-key="firstname">Имя</label>
+            </div>
+            <div class="text-field__input">
+              <input class="field__input" type="text" name="patronymic" placeholder="" required>
+              <label class="text-field__placeholder" data-i18n-key="patronymic">Отчество</label>
+            </div>
+            <div class="text-field__input">
+              <input class="field__input" type="date" name="birthyear" required>
+              <label class="text-field__placeholder" data-i18n-key="birthdate">Дата рождения</label>
+            </div>
+            <div class="text-field__input">
+              <input class="field__input" type="text" name="country" placeholder="" required>
+              <label class="text-field__placeholder" data-i18n-key="country">Страна</label>
+            </div>
+            <div class="text-field__input">
+              <input class="field__input" type="text" name="city" placeholder="" required>
+              <label class="text-field__placeholder" data-i18n-key="city">Город</label>
+            </div>
           </div>
           <!-- Второй столбик -->
           <div class="column">
-            <span class="column-title">Профессиональные данные</span>
+            <span class="column-title" data-i18n-key="professional_data">Профессиональные данные</span>
+
             <select id="position" name="position">
-              <option disabled selected>Должность</option>
-              <option>школьник</option>
-              <option>студент</option>
-              <option>аспирант</option>
-              <option>младший научный сотрудник</option>
-              <option>научный сотрудник</option>
-              <option>старший научный сотрудник</option>
-              <option>доцент</option>
-              <option>профессор</option>
-              <option>ведущий исследователь</option>
+              <option disabled selected data-i18n-key="position_placeholder">Должность</option>
+              <option data-i18n-key="position_school">школьник</option>
+              <option data-i18n-key="position_student">студент</option>
+              <option data-i18n-key="position_phd">аспирант</option>
+              <option data-i18n-key="position_junior_researcher">младший научный сотрудник</option>
+              <option data-i18n-key="position_researcher">научный сотрудник</option>
+              <option data-i18n-key="position_senior_researcher">старший научный сотрудник</option>
+              <option data-i18n-key="position_associate_professor">доцент</option>
+              <option data-i18n-key="position_professor">профессор</option>
+              <option data-i18n-key="position_other">другая должность</option>
             </select>
-              <!-- Невидимое поле Название группы -->
-            <div id="groupName-container" style="display:none;">
-              <input type="text" id="groupName" name="groupName" placeholder="Название группы" />
+
+            <div class="text-field__input" id="groupName-wrapper" style="display: none;">
+              <input class="field__input" type="text" id="groupName" name="groupName" placeholder=" " autocomplete="off" />
+              <label class="text-field__placeholder" data-i18n-key="group_name">Название группы</label>
             </div>
+
+            <div class="text-field__input" id="otherJob-container" style="display: none;">
+              <input class="field__input" type="text" id="otherJob" name="otherJob" placeholder=" " autocomplete="off" />
+              <label class="text-field__placeholder" data-i18n-key="position">должность</label>
+            </div>
+
             <select name="degree">
-              <option disabled selected>Учёная степень</option>
-              <option>кандидат наук</option>
-              <option>доктор наук</option>
-              <option>без учёной степени</option>
+              <option disabled selected data-i18n-key="degree_placeholder">Учёная степень</option>
+              <option data-i18n-key="degree_candidate">кандидат наук</option>
+              <option data-i18n-key="degree_doctor">доктор наук</option>
+              <option data-i18n-key="degree_none">без учёной степени</option>
             </select>
+
             <select id="organization" name="organization">
-              <option disabled selected>Организация/ВУЗ</option>
-              <option value="pnipu">ФГБОУ ВО «ПНИПУ»</option>
-              <option value="other">другое</option>
+              <option disabled selected data-i18n-key="organization_placeholder">Организация/ВУЗ</option>
+              <option value="pnipu" data-i18n-key="organization_pnipu">ФГБОУ ВО «ПНИПУ»</option>
+              <option value="other" data-i18n-key="organization_other">другая Организация/ВУЗ</option>
             </select>
-            <!-- Поле ввода для другой организации, скрыто по умолчанию -->
-            <div id="otherOrganization-container" style="display:none;">
-              <input type="text" id="otherOrganization" name="other_organization" placeholder="Организация/ВУЗ" />
+
+            <div class="text-field__input" id="otherOrganization-container" style="display: none;">
+              <input class="field__input" type="text" id="otherOrganization" name="other_organization" placeholder=" " autocomplete="off"/>
+              <label class="text-field__placeholder" data-i18n-key="organization_label">Организация/ВУЗ</label>
             </div>
-            <input type="text" id="faculty" name="faculty" placeholder="Факультет" />
-            <input type="text" id="department" name="department" placeholder="Кафедра" />
-            <input type="text" id="laboratory" name="laboratory" placeholder="Лаборатория" />
+
+            <div class="text-field__input">
+              <input class="field__input" type="text" id="fac_dep_lab" name="fac_dep_lab" placeholder=" " required>
+              <label class="text-field__placeholder" data-i18n-key="fac_dep_lab">Факультет/Кафедра/Лаборатория</label>
+            </div>
           </div>
-          <!--Третий столбик-->
+
+          <!-- Третий столбик -->
           <div class="column">
-            <span class="column-title">Контакты</span>
-            <input type="text" id="phone" name="phone" placeholder="Телефон" />
-            <input type="email" id="email" name="email" placeholder="Почта" />
-            <button type="bytton" class="button">Сохранить данные</button>
+            <span class="column-title" data-i18n-key="contacts">Контакты</span>
+            <div class="text-field__input">
+              <input class="field__input" type="text" id="phone" name="phone" placeholder="" required>
+              <label class="text-field__placeholder" data-i18n-key="phone">Телефон</label>
+            </div>
+            <div class="text-field__input">
+              <input class="field__input" type="text" id="email" name="email" placeholder="" required>
+              <label class="text-field__placeholder" data-i18n-key="email">Контактная почта</label>
+            </div>
+            <button type="button" class="button" id="saveButton" data-i18n-key="save_data">Сохранить данные</button>
           </div>
+
           <!-- Четвёртый столбик -->
           <div class="column">
-            <span class="column-title">Действия</span>
-            <a href="application_history.html" class="button">Список всех заявок</a>
-            <a href="application_submit.html" class="button">Подать заявку</a>
-            <a href="password_reset_confirm.html" class="button">Сменить пароль</a>
-            <a href="admin_panel.html" class="button">Панель администратора</a>
-            <a href="login.html" class="button">Выход из аккаунта</a>
+            <span class="column-title" data-i18n-key="actions">Действия</span>
+            <a href="application_history.html" class="button" data-i18n-key="application_list">Список всех заявок</a>
+            <a href="application_submit.html" class="button" data-i18n-key="submit_application">Подать заявку</a>
+            <a href="password_reset_confirm.html" class="button" data-i18n-key="change_password">Сменить пароль</a>
+            <a href="admin_panel.html" class="button" data-i18n-key="admin_panel">Панель администратора</a>
+            <a href="login.html" class="button" data-i18n-key="logout">Выход из аккаунта</a>
           </div>
         </div>
 
         <!-- Чекбокс согласия -->
         <div class="custom_checkbox">
-          <span class="checkbox_label">Согласие на обработку персональных данных</span>
+          <span class="checkbox_label" data-i18n-key="consent">Согласие на обработку персональных данных</span>
           <label class="checkmark_wrapper">
             <input type="checkbox" id="mailing" />
             <span class="checkmark"></span>
@@ -130,32 +170,7 @@
     </div>
   </main>
 
-  <script>
-    const positionSelect = document.getElementById('position');
-    const groupContainer = document.getElementById('groupName-container');
-    const groupInput = document.getElementById('groupName');
-
-    positionSelect.addEventListener('change', () => {
-      if (positionSelect.value === 'студент') {
-        groupContainer.style.display = 'flex';
-      } else {
-        groupContainer.style.display = 'none';
-        groupInput.value = '';
-      }
-    });
-
-    const organizationSelect = document.getElementById('organization');
-    const otherOrgContainer = document.getElementById('otherOrganization-container');
-    const otherOrgInput = document.getElementById('otherOrganization');
-
-    organizationSelect.addEventListener('change', () => {
-      if (organizationSelect.value === 'other') {
-        otherOrgContainer.style.display = 'flex';
-      } else {
-        otherOrgContainer.style.display = 'none';
-        otherOrgInput.value = '';
-      }
-    });
-  </script>
+  <script src="static/js/script_account.js" defer></script>
+  <script src="static/js/script_translate.js" defer></script>
 </body>
 </html>

@@ -29,3 +29,69 @@ h1 {
   font-size: 24px;
 }
 
+/* Чекбокс и связанные стили */
+.custom_checkbox {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* расстояние между чекбоксом и текстом */
+  align-items: center; /* вертикальное выравнивание */
+  background-color: #D8D9F0;
+  padding: 1px 10px 1px 7px;
+  width: 600px;
+  height: 36px;
+  font-size: 16px;
+  cursor: default;
+}
+
+.checkbox_label {
+  font-size: 16px;
+  margin-left: 4px; /* небольшой отступ от чекбокса */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.checkmark_wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.checkmark_wrapper input[type="checkbox"] {
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.checkmark {
+  height: 24px;
+  width: 24px;
+  border: 2px solid #000;
+  background-color: #fff;
+  display: inline-block;
+  z-index: 1;
+}
+
+.checkmark_wrapper input[type="checkbox"]:checked + .checkmark {
+  background-color: black;
+  position: relative;
+}
+
+.checkmark_wrapper input[type="checkbox"]:checked + .checkmark::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
