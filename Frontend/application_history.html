@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Конференции - супер-сайтик</title>
+  <link rel="icon" type="image/png" href="static/image/logo/pish_logo_square_32x32.png">
   <link rel="stylesheet" href="static/css/global.css">
   <link rel="stylesheet" href="static/css/style_header.css">
   <link rel="stylesheet" href="static/css/style_application_history.css">
@@ -16,7 +17,7 @@
     <div class="top_nav">
 
       <a href="index.html" class="logo">
-        <img class="header_logo" alt="ПНИПУ" src="static/image/pish_logo.png">
+        <img class="header_logo" alt="ПНИПУ" src="static/image/logo/pish_logo.png">
       </a>
 
       <nav class="header_nav">
@@ -29,6 +30,16 @@
         </ul>
       </nav>
 
+      <div class="language-switcher">
+        <span class="language-label">Language</span>
+        <div class="language-dropdown">
+          <div class="language-current">Русский</div>
+          <ul class="language-options">
+            <li>English</li>
+          </ul>
+        </div>
+      </div>
+
       <a href="login.html" class="btn">ВХОД</a>
     </div>
   </header>
@@ -37,22 +48,67 @@
 
   <main class="main">
     <div class="container">
-      
-      <div class="appliction_current">
-        <h2 class="appliction_history_header">Текущие заявки</h2>
+      <h2 class="appliction_history_header">История заявок</h2>
+
+      <div class="appliction_container">
         <div class="application_info">
           <div class="application">
-            <p class="info">Название доклада</p>
-            <p class="info">Соавторы</p>
-            <p class="info">Статус</p>
-          </div>
-
-          <div class="application">
-            <p class="info">Название доклада</p>
-            <p class="info">Соавторы</p>
-            <p class="info">Статус</p>
+            <label for="name" class="application_label">Название доклада</label>
+            <p class="info" id="name"><a href="application_submit.html">Гарьулион узубиорак</a></p>
+            <label for="authors" class="application_label">Соавторы</label>
+            <p class="info" id="authors">amogus, abobus, infernus</p>
+            <label for="status" class="application_label">Статус</label>
+            <p class="info" id="status">принято</p>
           </div>
         </div>
+
+        <div class="application_info">
+          <div class="application">
+            <label for="name" class="application_label">Название доклада</label>
+            <p class="info" id="name"><a href="application_submit.html">Гарьулион узубиорак</a></p>
+            <label for="authors" class="application_label">Соавторы</label>
+            <p class="info" id="authors">amogus, abobus, infernus</p>
+            <label for="status" class="application_label">Статус</label>
+            <p class="info" id="status"> принято</p>
+          </div>
+        </div>
+
+        <div class="application_info">
+          <div class="application">
+            <label for="name" class="application_label">Название доклада</label>
+            <p class="info" id="name"><a href="application_submit.html">Гарьулион узубиорак</a></p>
+            <label for="authors" class="application_label">Соавторы</label>
+            <p class="info" id="authors">amogus, abobus, infernus</p>
+            <label for="status" class="application_label">Статус</label>
+            <p class="info" id="status"> принято</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="appliction_history_header">Заявки прошлых лет</h2>
+
+      <div class="past_application">
+
+        <div class="past_application_info">
+          <div class="application">
+            <label for="name" class="application_label">Название доклада</label>
+            <p class="info" id="name"><a href="application_submit.html">Кузьма курильщик</a></p>
+            <label for="authors" class="application_label">Авторы</label>
+            <p class="info" id="authors">amogus, abobus, infernus</p>
+          </div>
+        </div>
+
+        <div class="past_application_info">
+          <div class="application">
+            <label for="name" class="application_label">Название доклада</label>
+            <p class="info" id="name"><a href="application_submit.html">Барусильни кусиболё</a></p>
+            <label for="authors" class="application_label">Авторы</label>
+            <p class="info" id="authors">Бэнгос. Шуго, Кирамон</p>
+          </div>
+        </div>
+
+
+      </div>
       </div>
       
     </div>

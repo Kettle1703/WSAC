@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Конференции - супер-сайтик</title>
+  <link rel="icon" type="image/png" href="static/image/logo/pish_logo_square_32x32.png">
   <link rel="stylesheet" href="static/css/global.css">
   <link rel="stylesheet" href="static/css/style_header.css">
   <link rel="stylesheet" href="static/css/style_application_submit.css">
@@ -16,7 +17,7 @@
     <div class="top_nav">
 
       <a href="index.html" class="logo">
-        <img class="header_logo" alt="ПНИПУ" src="static/image/pish_logo.png">
+        <img class="header_logo" alt="ПНИПУ" src="static/image/logo/pish_logo.png">
       </a>
 
       <nav class="header_nav">
@@ -48,7 +49,7 @@
   <main class="main">
     <div class="container">
       <div class="applictaion_submit">
-        <h2 class="applitation_submit_header">Подать заявку на участие в конференции</h1>
+        <h2 class="applitation_submit_header">Подать заявку на участие в конференции</h2>
         <div class="inputs">
           
           <select class="select participation_form" id="participation">
@@ -63,11 +64,26 @@
             <label class="text-field__placeholder">Название доклада</label>
           </div>
           
-          <div class="text-field__input">
-            <input class="field__input" type="text" placeholder="" required>
-            <label class="text-field__placeholder">Соавторы (при наличии, ФИО, организация)</label>
+          <button type="button" id="add-coauthor-btn" class="btn btn-secondary">Добавить соавтора</button>
+          <div id="coauthors-container">
+            <div class="coauthor-block">
+              <div class="text-field__input">
+                <input class="field__input" type="text" placeholder="" required>
+                <label class="text-field__placeholder">ФИО соавтора</label>
+              </div>
+
+              <select class="select organization">
+                <option disabled selected>Организация/ВУЗ</option>
+                <option value="pnipu">ФГБОУ ВО «ПНИПУ»</option>
+                <option value="other">другое</option>
+              </select>
+
+              <div class="other-organization-container" style="display:none;">
+                <input class="field__input" type="text" name="other_organization" placeholder="Организация/ВУЗ" />
+              </div>
+            </div>
           </div>
-          
+
           <select class="select thematic-sections" id="section">
             <option value="" disabled selected>Тематические секции конференции</option>
             <option value="1">Новые материалы и технологии их создания</option>
@@ -149,6 +165,60 @@
         fileNameDisplay.textContent = fileName;
       });
     });
+
+  const container = document.getElementById('coauthors-container');
+  const addBtn = document.getElementById('add-coauthor-btn');
+
+  function createCoauthorBlock() {
+    const block = document.createElement('div');
+    block.classList.add('coauthor-block');
+
+    block.innerHTML = `
+      <div class="text-field__input">
+        <input class="field__input" type="text" placeholder="" required>
+        <label class="text-field__placeholder">ФИО соавтора</label>
+      </div>
+
+      <select class="select organization">
+        <option disabled selected>Организация/ВУЗ</option>
+        <option value="pnipu">ФГБОУ ВО «ПНИПУ»</option>
+        <option value="other">другое</option>
+      </select>
+
+      <div class="other-organization-container" style="display:none;">
+        <input class="field__input" type="text" name="other_organization" placeholder="Организация/ВУЗ" />
+      </div>
+
+      <button type="button" class="remove-coauthor-btn btn btn-small btn-danger">Удалить соавтора</button>
+    `;
+
+    // обработка select
+    block.querySelector('select').addEventListener('change', function () {
+      const otherField = this.nextElementSibling;
+      otherField.style.display = this.value === 'other' ? 'block' : 'none';
+    });
+
+    // обработка удаления
+    block.querySelector('.remove-coauthor-btn').addEventListener('click', () => {
+      container.removeChild(block);
+    });
+
+    return block;
+  }
+
+  addBtn.addEventListener('click', () => {
+    const newBlock = createCoauthorBlock();
+    container.appendChild(newBlock);
+  });
+
+  // активация select в первом блоке
+  const firstSelect = container.querySelector('select.organization');
+  if (firstSelect) {
+    firstSelect.addEventListener('change', function () {
+      const otherField = this.nextElementSibling;
+      otherField.style.display = this.value === 'other' ? 'block' : 'none';
+    });
+  }    
   </script>
 
 </body>

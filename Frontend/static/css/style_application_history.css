@@ -1,8 +1,14 @@
+.application_container {
+  display: grid;
+  gap: 20px;
+}
+
 .application_info {
   width: auto;
-  background-color: #968AE1;
+  background-color: #c0b6fc;
   font-size: 16px;
   padding: 9px 7px;
+  margin-bottom: 20px;
   display: grid;
   gap: 30px;
 }
@@ -16,4 +22,22 @@
   background-color: #D8D9F0;
   margin: 0;
   padding: 9px 7px;
+}
+
+.info a {
+  text-decoration: underline;
+}
+
+.application_label {
+  margin: 0 0 -5px 7px;
+}
+
+.past_application_info {
+  width: auto;
+  background: #faa6fa;
+  font-size: 16px;
+  padding: 9px 7px;
+  margin-bottom: 20px;
+  display: grid;
+  gap: 30px;
 }

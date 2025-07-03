@@ -206,3 +206,28 @@
   cursor: default; /* теперь клика нет на всём блоке */
 }
 
+.coauthor-block {
+  display: grid;
+  gap: 15px;
+}
+
+.coauthor-block .text-field__input {
+  margin-top: 40px;
+}
+
+.btn-secondary {
+  width: 600px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: -40px;
+}
+
+.remove-coauthor-btn {
+  width: 600px;
+  padding: 7px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
