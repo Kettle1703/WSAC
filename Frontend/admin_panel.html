@@ -10,13 +10,127 @@
 </head>
 
 <body>
-   <main class="main">
-     <div class="container">
+  <main class="main">
+    <div class="container">
+      <div class="admin-header">
+        <h2 class="admin-title">Панель администратора</h2>
+        <button class="button">Назад</button>
+      </div>
 
-        
-        
-     </div>
-   </main>
+      <h1>Модерирование заявок</h1>
+      <div class="row-grid">
+        <h3 class="filters-title">Выбор фильтров:</h3>
+        <div class="applications-count">
+          <label for="applications-count-number">Найдено заявок:</label>
+          <span id="applications-count-number">0</span>
+        </div>
+      </div>
+      
+      <div class="row-grid filters">
+        <div class="select-wrapper filter-section">
+          <select class="select thematic-sections" id="section">
+            <option value="" disabled selected>Тематические секции конференции</option>
+            <option value="1">Новые материалы и технологии их создания</option>
+            <option value="2">Современные методы обработки материалов</option>
+            <option value="3">Передовые производственные технологии создания материалов и изделий</option>
+            <option value="4">Аддитивные и гибридные технологии в машиностроении</option>
+            <option value="5">Аэрокосмическая механика – самолеты будущего</option>
+            <option value="6">Электромеханические системы</option>
+            <option value="7">Математическое моделирование материалов, систем и процессов</option>
+            <option value="8">Цифровые технологии и машинное обучение в машиностроении</option>
+            <option value="9">Школьная секция</option>
+          </select>
+        </div>
+
+        <div class="select-wrapper filter-participation">
+          <select class="select participation_form" id="participation">
+            <option value="all_form" disabled selected>Формат участия</option>
+            <option value="full-time">Очная</option>
+            <option value="correspondence">Заочная</option>
+            <option value="distant">Дистанционная</option>
+          </select>
+        </div>
+
+        <div class="select-wrapper filter-status">
+          <select class="select status" id="status">
+            <option value="all_status" disabled selected>Статус заявки</option>
+            <option value="checked">Проверяется</option>
+            <option value="adopted">Доклад принят</option>
+            <option value="rejected">Доклад отклонён</option>
+          </select>
+        </div>
+      </div>
+      <h3 class="filters-title">Доклады:</h3>
+      <div class="committee_block">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                (Название доклада, которое у нас может быть очень длинным иииииииииииииииии иииииииииииииииииииииииииииииииииииииииииииииии иииииииииииииииииииииииииииииииииииииииииииииииииии)
+                <button class="toggle-details">▶</button>
+              </td>
+              <td>(Статус)</td>
+            </tr>
+            <tr class="details-row author-label">
+              <td colspan="2">Блок автора</td>
+            </tr>
+            <tr class="details-row">
+              <td colspan="2">[Название секции, тоже длинная строчка]</td>
+            </tr>
+            <tr class="details-row">
+              <td>(ФИО подающего заявку)</td>
+              <td>[Организация подающего]</td>
+            </tr>
+            <tr class="details-row">
+              <td>[Формат участия]</td>
+              <td>(Страна и город)</td>
+            </tr>
+            <tr class="details-row author-label">
+              <td colspan="2">Блок соавторов</td>
+            </tr>
+            <tr class="details-row">
+              <td>(ФИО 1 соавтора)</td>
+              <td>[Организация 1 соавтора]</td>
+            </tr>
+            <tr class="details-row">
+              <td>(ФИО 2 соавтора)</td>
+              <td>[Организация 2 соавтора]</td>
+            </tr>
+            <tr class="details-row author-label">
+              <td colspan="2">Научный руководитель</td>
+            </tr>
+            <tr class="details-row">
+              <td>(ФИО научного руководителя)</td>
+              <td>(Его телефон)</td>
+            </tr>
+            <tr class="details-row">
+              <td>Файл тезисов</td>
+              <td>{ссылка на файл}</td>
+            </tr>
+            <tr class="details-row">
+              <td>Файл эксперного заключения</td>
+              <td>{ссылка на файл}</td>
+            </tr>
+            <tr class="details-row">
+              <td>Сменить статус заявки</td>
+              <td>
+                <div class="select-wrapper">
+                  <select class="select status" id="status">
+                    <option value="all_status" disabled selected>Новый статус заявки</option>
+                    <option value="checked">Проверяется</option>
+                    <option value="adopted">Доклад принят</option>
+                    <option value="rejected">Доклад отклонён</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+  </main>
+  <script src="static/js/script_admin_panel.js" defer></script>
 </body>
-
 </html>
