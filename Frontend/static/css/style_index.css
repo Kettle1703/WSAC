@@ -2,6 +2,14 @@
   margin-bottom: 40px;
 }
 
+.main-title {
+  background: none;       /* убираем фон, если вдруг был */
+  padding-top: 2rem;      /* отступ сверху */
+  padding-bottom: 2rem;   /* отступ снизу */
+  margin: 0;              /* чтобы не было лишнего от родителя */
+  font-weight: 600;       /* чуть более выраженный */
+}
+
 .slider {
   position: relative;
   width: 100%;

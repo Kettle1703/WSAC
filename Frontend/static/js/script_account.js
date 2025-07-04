@@ -122,7 +122,7 @@ const translations = {
     degree_doctor: "Doctor of Sciences",
     degree_none: "No Degree",
     organization_placeholder: "Organization/University",
-    organization_pnipu: "PNRPU",
+    organization_pnipu: "FSBEI of HE «PNRPU»",
     organization_other: "Other Organization/University",
     organization_label: "Organization/University",
     fac_dep_lab: "Faculty/Department/Lab",
